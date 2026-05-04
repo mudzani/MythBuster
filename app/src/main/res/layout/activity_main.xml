@@ -1,19 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!-- The Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/happiness"
+        android:scaleType="centerCrop" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Dark overlay for text readability using the required @color format -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:alpha="0.5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp">
+
+        <!-- App Title -->
+        <TextView
+            android:id="@+id/tvAppTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Life Hack or Urban Myth?"
+            android:textSize="28sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"
+            android:shadowColor="@color/black"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="5"/>
+
+        <!-- Required Welcome Message -->
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to the ultimate truth-seeking challenge!"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Required App Description -->
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test your common sense and learn to distinguish between genuine productivity shortcuts and viral internet rumours."
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginBottom="40dp"/>
+
+        <!-- Start Button -->
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="220dp"
+            android:layout_height="60dp"
+            android:text="Start Quiz"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:backgroundTint="#E94560"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</FrameLayout>
