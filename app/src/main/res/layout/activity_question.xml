@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Keeping the background consistent with the welcome screen -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/happiness"
+        android:scaleType="centerCrop" />
+
+    <!-- Dark overlay so the text is easy to read -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:alpha="0.6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question 1 of 10"
+            android:textColor="#B0B0B0"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- This box looks like a card now -->
+        <TextView
+            android:id="@+id/tvStatement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Statement goes here."
+            android:textSize="22sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="32dp"
+            android:padding="24dp"
+            android:background="#8016213E"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/btnHack"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="✅ Hack"
+                android:textSize="16sp"
+                android:backgroundTint="#2ECC71"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnMyth"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="❌ Myth"
+                android:textSize="16sp"
+                android:backgroundTint="#E94560"
+                android:layout_marginStart="8dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"
+            android:padding="12dp"/>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="168dp"
+            android:layout_height="wrap_content"
+            android:text="Next →"
+            android:textSize="20sp"
+            android:backgroundTint="#8016213E"/>
+
+    </LinearLayout>
+</FrameLayout>
