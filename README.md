@@ -63,7 +63,7 @@ Android Developers, 2024. Log. [online] Available at:
 
 GitHub, 2024. Automated build android app with github action. [online] Available at:
 <https://github.com/marketplace/actions/automated-build-android-app-with-github-action>
-[Accessed 4 May 2025].
+[Accessed 4 May 2025]...
 
 JetBrains, 2024. Kotlin documentation. [online] Available at:
 <https://kotlinlang.org/docs/home.html> [Accessed 4 May 2026]...
