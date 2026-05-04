@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- same background as Welcome/Question screens -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/happiness"
+        android:scaleType="centerCrop" />
+
+    <!-- Dark overlay using the required @color/black format -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:alpha="0.65" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <!-- Personalized Score Display -->
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You got X out of 10!"
+            android:textSize="32sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:shadowColor="@color/black"
+            />
+
+        <!-- Personalized Feedback based on score -->
+        <TextView
+            android:id="@+id/tvScoreFeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feedback here!"
+            android:textSize="20sp"
+            android:textColor="#F0F0F0"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:layout_marginBottom="48dp"
+            android:padding="10dp"/>
+
+        <!-- Review Button as required by the brief -->
+        <Button
+            android:id="@+id/btnReview"
+            android:layout_width="220dp"
+            android:layout_height="60dp"
+            android:text="📋 Review Answers"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:backgroundTint="#E94560"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+</FrameLayout>
